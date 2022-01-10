@@ -34,7 +34,7 @@ class Form extends React.Component {
         input["confirm_password"] = "";
         this.setState({input:input});
   
-        alert('Demo Form is submited');
+        alert('Form is submited');
     }
   }
   
@@ -42,6 +42,7 @@ class Form extends React.Component {
       let input = this.state.input;
       let errors = {};
       let isValid = true;
+      
   
       if (!input["email"]) {
         isValid = false;

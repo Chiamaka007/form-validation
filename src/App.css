@@ -3,21 +3,31 @@
   justify-content: center;
   align-items: center;
   margin-top: 100px;
-
 }
+
 .form-group {
-  width: 500px;
+  width: 450px  ;
   border: 1px solid #EEEEEE;
   padding: 30px;
   border-radius: 6px;
   background-color: #EEEEEE;
 }
-.form-control {
-  margin-bottom: 30px;
+.text-danger {
+margin-bottom: 20px;
 }
 .button {
   background-color:  #142d4c;
   color: #fff;
   border-radius: 4px;
   height: 40px
+}
+
+@media only screen and (max-width: 600px) {
+.form-group {
+  width: 350px;
+  padding: 20px;
+}  
+.text-danger {
+  margin-bottom: 10px;
+}
 }
