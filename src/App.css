@@ -10,4 +10,14 @@
   border: 1px solid #EEEEEE;
   padding: 30px;
   border-radius: 6px;
+  background-color: #EEEEEE;
+}
+.form-control {
+  margin-bottom: 30px;
+}
+.button {
+  background-color:  #142d4c;
+  color: #fff;
+  border-radius: 4px;
+  height: 40px
 }
