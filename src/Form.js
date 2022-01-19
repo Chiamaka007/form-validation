@@ -121,17 +121,8 @@ class Form extends React.Component {
           
   
           
-            <label for="password">Confirm Password:</label>
-            <input 
-              type="password" 
-              name="confirm_password" 
-              value={this.state.input.confirm_password}
-              onChange={this.handleChange}
-              className="form-control" 
-              placeholder="Confirm password" 
-              id="confirm_password" />
-  
-              <div className="text-danger">{this.state.errors.confirm_password}</div>
+            
+            
           
            <div className="button">   
           <input type="submit" value="Submit" className="btn text-white w-100 button-wrapper" />
