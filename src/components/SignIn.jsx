@@ -32,7 +32,7 @@ class Form extends React.Component {
         let input = {};
         input["email"] = "";
         input["password"] = "";
-        input["confirm_password"] = "";
+        
         this.setState({input:input});
   
         alert('Form is submited');
@@ -64,18 +64,7 @@ class Form extends React.Component {
         errors["password"] = "Please enter your password.";
       }
   
-      if (!input["confirm_password"]) {
-        isValid = false;
-        errors["confirm_password"] = "Please confirm your password.";
-      }
-  
-      if (typeof input["password"] !== "undefined" && typeof input["confirm_password"] !== "undefined") {
-          
-        if (input["password"] !== input["confirm_password"]) {
-          isValid = false;
-          errors["password"] = "Passwords don't match.";
-        }
-      } 
+     
   
       this.setState({
         errors: errors
