@@ -1,7 +1,8 @@
 import React from 'react';
+import  {Link} from 'react-router-dom';
 import './App.css';
   
-class Form extends React.Component {
+class ForgotPassword extends React.Component {
     constructor() {
     super();
     this.state = {
@@ -30,8 +31,7 @@ class Form extends React.Component {
   
         let input = {};
         input["email"] = "";
-        input["password"] = "";
-        input["confirm_password"] = "";
+        
         this.setState({input:input});
   
         alert('Form is submited');
@@ -58,24 +58,7 @@ class Form extends React.Component {
         }
       }
   
-      if (!input["password"]) {
-        isValid = false;
-        errors["password"] = "Please enter your password.";
-      }
-  
-      if (!input["confirm_password"]) {
-        isValid = false;
-        errors["confirm_password"] = "Please confirm your password.";
-      }
-  
-      if (typeof input["password"] !== "undefined" && typeof input["confirm_password"] !== "undefined") {
-          
-        if (input["password"] !== input["confirm_password"]) {
-          isValid = false;
-          errors["password"] = "Passwords don't match.";
-        }
-      } 
-  
+      
       this.setState({
         errors: errors
       });
@@ -88,12 +71,13 @@ class Form extends React.Component {
       <div>
       
           <div class="form-group">
-            <h3 className='text-center'>Sign in</h3>
+            <h3>Forgot Password</h3>
+            <p className='mt-4'>Please enter your email address. You will receive a code to create a new password.</p>
         <form onSubmit={this.handleSubmit}>
   
 
   
-            <label for="email">Email Address:</label>
+            <label for="email" className='mt-1'>Email Address:</label>
             <input 
               type="text" 
               name="email" 
@@ -104,29 +88,10 @@ class Form extends React.Component {
               id="email" />
   
               <div className="text-danger">{this.state.errors.email}</div>
-          
-   
-          
-            <label for="password">Password:</label>
-            <input 
-              type="password" 
-              name="password" 
-              value={this.state.input.password}
-              onChange={this.handleChange}
-              className="form-control" 
-              placeholder="Enter password" 
-              id="password" />
-  
-              <div className="text-danger">{this.state.errors.password}</div>
-          
-  
-          
-            
-            
-          
-           <div className="button">   
+           <div className="button mt-2">   
           <input type="submit" value="Submit" className="btn text-white w-100 button-wrapper" />
-           </div>       
+           </div>
+           <Link to="/" className=' blue-text'>Sign in</Link>        
         </form>
         </div>
       </div>
@@ -134,4 +99,13 @@ class Form extends React.Component {
   }
 }
   
-export default Form;
+export default ForgotPassword;
+          
+   
+          
+            
+  
+          
+            
+            
+          
